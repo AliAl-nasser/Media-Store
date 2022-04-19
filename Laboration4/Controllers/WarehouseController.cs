@@ -9,8 +9,8 @@ namespace Laboration4.Controllers
     public class WarehouseController
     {
         FileProcessor FileProcesspr = new FileProcessor();
-        public static List<InventoryProduct> ProductsList { get; set; }
-        public static List<Stats> StatList { get; set; }
+        public static List<InventoryProduct> ProductsList;
+        public static List<Stats> StatList;
         DataGridView gridData;
         public Exception execption;
 

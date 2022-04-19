@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Laboration4.Controllers.CashregisterController">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABAQAAAAAAAJAAAAAAABAAAQEAAQAIEIBAAAAAgECA=</HashCode>
+      <FileName>Controllers\CashregisterController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="warehouseController" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Laboration4.Controllers.WarehouseController">
+    <Position X="3" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAQAAAEAAAAAAQwEAAAAAUABAAAIAwEAA=</HashCode>
+      <FileName>Controllers\WarehouseController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="FileProcesspr" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Laboration4.Models.FileProcessor">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAQEAAAAAAAAAACAAQAAA=</HashCode>
+      <FileName>Models\FileProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Laboration4.Models.InventoryProduct">
+    <Position X="8.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAACQAAAAAAgAJAAAQAAAgAAAAACQAAgAAAAAA=</HashCode>
+      <FileName>Models\InventoryProduct.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Laboration4.Models.ShoppingCartItem">
+    <Position X="8.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAAQAAAAAAAAAAQAAgAAAAAA=</HashCode>
+      <FileName>Models\ShoppingCartItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Laboration4.Models.Stats">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAACAAAAAAAABAQAAAAAAAAA=</HashCode>
+      <FileName>Models\Stats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Laboration4.Views.AddItem">
+    <Position X="10.25" Y="0.75" Width="1.5" />
+    <Members>
+      <Field Name="AuthorTextBox" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="DoneButton" Hidden="true" />
+      <Field Name="FormatTextBox" Hidden="true" />
+      <Field Name="GenreTextBox" Hidden="true" />
+      <Field Name="IdTextBox" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label10" Hidden="true" />
+      <Field Name="label11" Hidden="true" />
+      <Field Name="label12" Hidden="true" />
+      <Field Name="label13" Hidden="true" />
+      <Field Name="label14" Hidden="true" />
+      <Field Name="label15" Hidden="true" />
+      <Field Name="label16" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="label8" Hidden="true" />
+      <Field Name="label9" Hidden="true" />
+      <Field Name="LanguageTextBox" Hidden="true" />
+      <Field Name="NameTextBox" Hidden="true" />
+      <Field Name="PlatformTextBox" Hidden="true" />
+      <Field Name="PlaytimeTextBox" Hidden="true" />
+      <Field Name="PriceTextBox" Hidden="true" />
+      <Field Name="QuantityTextBox" Hidden="true" />
+      <Field Name="TypeTextBox" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>9wgCAKCESSCIgdAAisKAAAgCAAgAAAAAKYAAgAAAIAA=</HashCode>
+      <FileName>Views\AddItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Laboration4.Views.Statistics">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <Members>
+      <Field Name="button1" Hidden="true" />
+      <Field Name="comboBox1" Hidden="true" />
+      <Field Name="comboBox2" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="MonthLabel" Hidden="true" />
+      <Field Name="TopList" Hidden="true" />
+      <Field Name="Yearlabel" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAAAABCAAABAQAAGAAIACAAgIQAAAAIAAAQAAAAA=</HashCode>
+      <FileName>Views\Statistics.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="WarehouseController" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Laboration4.MainForm">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <Members>
+      <Field Name="CashregisterTab" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="serviceController1" Hidden="true" />
+      <Field Name="tabControl1" Hidden="true" />
+      <Field Name="WarehouseTab" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAKAAAAAAABCAEAACAQAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Views\MainView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Laboration4.WarehouseView">
+    <Position X="6.75" Y="3" Width="1.5" />
+    <Members>
+      <Field Name="AddButton" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="contextMenuStrip1" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="flowLayoutPanel1" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="InventoryGridView" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="NewDelivery" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="panel3" Hidden="true" />
+      <Field Name="panel4" Hidden="true" />
+      <Field Name="panel5" Hidden="true" />
+      <Field Name="pictureBox1" Hidden="true" />
+      <Field Name="productsBindingSource" Hidden="true" />
+      <Field Name="QuantityTextbox" Hidden="true" />
+      <Field Name="RemoveButton" Hidden="true" />
+      <Field Name="SearchTextbox" Hidden="true" />
+      <Field Name="StatisticsButton" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ABECAAAEFCAgABAAABCJBAACAMAAACAAAAAgAYJAQAI=</HashCode>
+      <FileName>Views\WarehouseView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="WarehouseController" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Laboration4.CashregisterView">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="AddToCartButton" Hidden="true" />
+      <Field Name="CartGridView" Hidden="true" />
+      <Field Name="CheckoutButton" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="contextMenuStrip1" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="InventoryGridView" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panel10" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="panel3" Hidden="true" />
+      <Field Name="panel4" Hidden="true" />
+      <Field Name="panel5" Hidden="true" />
+      <Field Name="panel6" Hidden="true" />
+      <Field Name="panel7" Hidden="true" />
+      <Field Name="panel8" Hidden="true" />
+      <Field Name="panel9" Hidden="true" />
+      <Field Name="pictureBox1" Hidden="true" />
+      <Field Name="pictureBox2" Hidden="true" />
+      <Field Name="RemoveCartButton" Hidden="true" />
+      <Field Name="RemoveItemButton" Hidden="true" />
+      <Field Name="RepurchaseButton" Hidden="true" />
+      <Field Name="SearchTextbox" Hidden="true" />
+    </Members>
+    <AssociationLine Name="CashregisterController" Type="Laboration4.Controllers.CashregisterController" FixedToPoint="true">
+      <Path>
+        <Point X="3" Y="0.5" />
+        <Point X="2.25" Y="0.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.303" Y="0.069" Height="0.182" Width="1.724" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EBECAACAECBAQBCAgACBAAAKAAgADAAAIEAAAQJBIgA=</HashCode>
+      <FileName>Views\CashregisterView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="CashregisterController" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Laboration4.Program">
+    <Position X="5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Laboration4.Models.ProductType">
+    <Position X="5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAgABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\InventoryProduct.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
