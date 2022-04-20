@@ -127,9 +127,9 @@ namespace Laboration4
         private void UpdateProducts_Click(object sender, EventArgs e)
         {
             WarehouseController.UpdateProducts();
-            if (WarehouseController.API != null)
+            if (!String.IsNullOrEmpty(WarehouseController.API))
             {
-                MessageBox.Show(WarehouseController.API.ToString());
+                MessageBox.Show(WarehouseController.API);
             }
         }
 

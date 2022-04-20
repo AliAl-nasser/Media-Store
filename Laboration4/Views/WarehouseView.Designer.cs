@@ -32,12 +32,12 @@
             this.InventoryGridView = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.QuantityTextbox = new System.Windows.Forms.TextBox();
-            this.NewDelivery = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.SyncButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.NewDelivery = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.StatisticsButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -103,22 +103,6 @@
             this.QuantityTextbox.TabIndex = 7;
             this.QuantityTextbox.TextChanged += new System.EventHandler(this.QuantityTextbox_TextChanged);
             // 
-            // NewDelivery
-            // 
-            this.NewDelivery.FlatAppearance.BorderSize = 0;
-            this.NewDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NewDelivery.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewDelivery.ForeColor = System.Drawing.Color.Coral;
-            this.NewDelivery.Image = global::Laboration4.Properties.Resources.plus_sign;
-            this.NewDelivery.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.NewDelivery.Location = new System.Drawing.Point(0, 6);
-            this.NewDelivery.Name = "NewDelivery";
-            this.NewDelivery.Size = new System.Drawing.Size(302, 34);
-            this.NewDelivery.TabIndex = 5;
-            this.NewDelivery.Text = "New delivery";
-            this.NewDelivery.UseVisualStyleBackColor = true;
-            this.NewDelivery.Click += new System.EventHandler(this.NewDelivery_Click);
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -162,6 +146,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Coral;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.Location = new System.Drawing.Point(0, 558);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(305, 35);
@@ -179,6 +164,22 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(305, 76);
             this.panel5.TabIndex = 9;
+            // 
+            // NewDelivery
+            // 
+            this.NewDelivery.FlatAppearance.BorderSize = 0;
+            this.NewDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NewDelivery.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewDelivery.ForeColor = System.Drawing.Color.Coral;
+            this.NewDelivery.Image = global::Laboration4.Properties.Resources.plus_sign;
+            this.NewDelivery.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.NewDelivery.Location = new System.Drawing.Point(0, 6);
+            this.NewDelivery.Name = "NewDelivery";
+            this.NewDelivery.Size = new System.Drawing.Size(302, 34);
+            this.NewDelivery.TabIndex = 5;
+            this.NewDelivery.Text = "New delivery";
+            this.NewDelivery.UseVisualStyleBackColor = true;
+            this.NewDelivery.Click += new System.EventHandler(this.NewDelivery_Click);
             // 
             // flowLayoutPanel1
             // 

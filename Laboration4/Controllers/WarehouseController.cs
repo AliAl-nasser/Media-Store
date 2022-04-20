@@ -20,8 +20,8 @@ namespace Laboration4.Controllers
         DataGridView gridData;
         // Exception catched when adding new product to productlist and displayed in the class WarehouseView
         public Exception execption;
-        // Exception for API error
-        public Exception API;
+        // Error message from API
+        public string API;
         // Populates the datagridview and provide source
         internal void PopulateGridView(DataGridView dataGrid)
         {
@@ -137,44 +137,43 @@ namespace Laboration4.Controllers
             List<uint> prices = new List<uint>();
             List<uint> stocks = new List<uint>();
             WebClient client = new WebClient();
+            var text = client.DownloadString("https://hex.cse.kau.se/~jonavest/csharp-api/");
             XmlDocument doc = new XmlDocument();
-            try
+            doc.LoadXml(text);
+            if (doc.InnerXml.Contains("error"))
             {
-                var text = client.DownloadString("https://hex.cse.kau.se/~jonavest/csharp-api");
-                doc.LoadXml(text);
+                API = "Error: " + doc.InnerText;
             }
-            catch(Exception ex)
+            else
             {
-                API = ex;
-            }
-
-            foreach(XmlElement elem in doc.FirstChild.ChildNodes)
-            {
-                if(elem.Name == "products")
+                foreach (XmlElement elem in doc.FirstChild.ChildNodes)
                 {
-                    foreach(XmlElement element in elem.ChildNodes)
+                    if (elem.Name == "products")
                     {
-                        ids.Add(uint.Parse(element["id"].InnerText));
-                        prices.Add(uint.Parse(element["price"].InnerText));
-                        stocks.Add(uint.Parse(element["stock"].InnerText));
+                        foreach (XmlElement element in elem.ChildNodes)
+                        {
+                            ids.Add(uint.Parse(element["id"].InnerText));
+                            prices.Add(uint.Parse(element["price"].InnerText));
+                            stocks.Add(uint.Parse(element["stock"].InnerText));
+                        }
                     }
                 }
-            }
-            for(int i = 0; i < ids.Count; i++)
-            {
-                var product = ProductsList.FirstOrDefault(p => p.Id == ids[i]);
-                if(product != null)
+                for (int i = 0; i < ids.Count; i++)
                 {
-                    product.Price = prices[i];
-                    product.Quantity = stocks[i];
+                    var product = ProductsList.FirstOrDefault(p => p.Id == ids[i]);
+                    if (product != null)
+                    {
+                        product.Price = prices[i];
+                        product.Quantity = stocks[i];
+                    }
                 }
+                UpdateDataGrid();
             }
-            UpdateDataGrid();
         }
 
         internal void Sync()
         {
-            throw new NotImplementedException();
+            WebClient client = new WebClient();
         }
 
         // Removes item from productlist
