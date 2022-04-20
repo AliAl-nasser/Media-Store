@@ -35,6 +35,8 @@
             this.NewDelivery = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.SyncButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.StatisticsButton = new System.Windows.Forms.Button();
@@ -126,6 +128,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.SyncButton);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
@@ -137,6 +141,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(305, 986);
             this.panel1.TabIndex = 3;
+            // 
+            // SyncButton
+            // 
+            this.SyncButton.FlatAppearance.BorderSize = 0;
+            this.SyncButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SyncButton.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SyncButton.ForeColor = System.Drawing.Color.Coral;
+            this.SyncButton.Location = new System.Drawing.Point(0, 599);
+            this.SyncButton.Name = "SyncButton";
+            this.SyncButton.Size = new System.Drawing.Size(305, 35);
+            this.SyncButton.TabIndex = 11;
+            this.SyncButton.Text = "Sync";
+            this.SyncButton.UseVisualStyleBackColor = true;
+            this.SyncButton.Click += new System.EventHandler(this.SyncButton_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Coral;
+            this.button1.Location = new System.Drawing.Point(0, 558);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(305, 35);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Update products";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.UpdateProducts_Click);
             // 
             // panel5
             // 
@@ -332,5 +364,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox SearchTextbox;
         private System.Windows.Forms.BindingSource productsBindingSource;
+        private System.Windows.Forms.Button SyncButton;
+        private System.Windows.Forms.Button button1;
     }
 }

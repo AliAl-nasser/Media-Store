@@ -7,9 +7,12 @@ namespace Laboration4.Models
 {
     public class FileProcessor
     {
- 
+        // Creates list of products
         static public List<InventoryProduct> ProductsList;
+        // Creates list of stats
         static public List<Stats> StatList;
+
+        // Reads CSV file to list
         public void ReadFile(string fileName)
         {
             using (var reader = new StreamReader(fileName, Encoding.UTF8))
@@ -30,16 +33,19 @@ namespace Laboration4.Models
            
         }
 
+        // Returns productlist
         public List<InventoryProduct> GetProductList()
         {
             return ProductsList;
         }
 
+        // Returns statlist
         public List<Stats> GetStatList()
         {
             return StatList;
         }
 
+        // Writes list to CSV file
         public void WriteFile(string fileName)
         {
             using (var writer = new StreamWriter(fileName))

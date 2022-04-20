@@ -11,8 +11,10 @@ namespace Laboration4.Views
             InitializeComponent();
         }
 
+        // All ids for products in inventory
         List<String> Ids = new List<String>();
-        public Boolean flag = false;
+        // flag to check if all obligatory fields are provided by the user
+        public bool flag = false;
         public string Id
         {
             get { return IdTextBox.Text; }
@@ -68,12 +70,14 @@ namespace Laboration4.Views
             get { return LanguageTextBox.Text; }
         }
 
+        // Set warehouse ids
         public void GetIdList(List<String> Id)
         {
             Ids = Id;
 
         }
 
+        // Event occurs when user leave Id textbox
         private void IdTextBox_TextChanged(object sender, EventArgs e)
         {
             if ((System.Text.RegularExpressions.Regex.IsMatch(IdTextBox.Text, "[^0-9]")))
@@ -92,6 +96,7 @@ namespace Laboration4.Views
             }
         }
 
+        // Event occurs when user leave price textbox
         private void Price_TextChanged(object sender, EventArgs e)
         {
             if ((System.Text.RegularExpressions.Regex.IsMatch(PriceTextBox.Text, "[^0-9]")))
@@ -101,6 +106,7 @@ namespace Laboration4.Views
             }
         }
 
+        // Event occurs when user leave quantity textbox
         private void Quantity_TextChanged(object sender, EventArgs e)
         {
             if ((System.Text.RegularExpressions.Regex.IsMatch(QuantityTextBox.Text, "[^0-9]")))
@@ -110,6 +116,7 @@ namespace Laboration4.Views
             }
         }
 
+        // Event occurs when user leave playtime textbox
         private void Playtime_TextChanged(object sender, EventArgs e)
         {
             if ((System.Text.RegularExpressions.Regex.IsMatch(PlaytimeTextBox.Text, "[^0-9]")))
@@ -119,6 +126,7 @@ namespace Laboration4.Views
             }
         }
 
+        // Event occurs when user leave type textbox
         private void TypeTextBox_TextChanged(object sender, EventArgs e)
         {
             if (TypeTextBox.Text != "Book" && TypeTextBox.Text != "Game" && TypeTextBox.Text != "Film")
@@ -129,6 +137,7 @@ namespace Laboration4.Views
             }
         }
 
+        // Event occurs when user click done button
         private void DoneButton_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(NameTextBox.Text) || String.IsNullOrEmpty(PriceTextBox.Text) || String.IsNullOrEmpty(IdTextBox.Text) || String.IsNullOrEmpty(TypeTextBox.Text)

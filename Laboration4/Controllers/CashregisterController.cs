@@ -11,14 +11,21 @@ namespace Laboration4.Controllers
 {
     public class CashregisterController
     {
+        // Instance of class WarehouseController to call methods
         WarehouseController warehouseController = new WarehouseController();
+        // Creates list of products
         static public List<InventoryProduct> ProductsList = new List<InventoryProduct>();
+        // creates list of stats
         static public List<Stats> StatList = new List<Stats>();
+        // creates list of shopping cart items
         static public List<ShoppingCartItem> CartList = new List<ShoppingCartItem>();
+        // DataGridViews for binding and updating the views
         DataGridView gridData;
         DataGridView gridData1;
+        // creates list of shopping cart item for repurchase
         static public List<ShoppingCartItem> TempCart = new List<ShoppingCartItem>();
 
+        // Populates the datagridviews and provide source for them
         internal void PopulateGridView(DataGridView dataGrid, DataGridView dataGrid1)
         {
             ProductsList = warehouseController.GetProductList();
@@ -31,7 +38,7 @@ namespace Laboration4.Controllers
             gridData1.DataSource = source;
         }
 
-
+        // Searches for attributes such as Name, Author, Type or Quantity in productlist
         internal void Search(TextBox textBox)
         {
             var results = ProductsList.Where(p => p.Name == textBox.Text || p.Author == textBox.Text || p.Type.ToString() == textBox.Text || p.Quantity.ToString() == textBox.Text).ToList();
@@ -45,17 +52,21 @@ namespace Laboration4.Controllers
             }
         }
 
+        // Updates datasource for products datagridview
         internal void UpdateDataGrid()
         {
             gridData.DataSource = null;
             gridData.DataSource = warehouseController.GetProductList();
         }
 
+        // Updates datasource for shopping cart datagridview
         internal void UpdateCartGrid()
         {
             gridData1.DataSource = null;
             gridData1.DataSource = CartList;
         }
+
+        // Adds a new product to shopping cart, if the product already exists in the shopping cart the the quantity will increase by 1
         internal void AddToCart(uint Id)
         {
             var product = ProductsList.FirstOrDefault(p => p.Id == Id);
@@ -78,9 +89,9 @@ namespace Laboration4.Controllers
             }
             UpdateCartGrid();
             UpdateDataGrid();
-
         }
 
+        // Repurchase all items i tempcart list and updates the quantity for product in productlist
         internal void Repurchase()
         {
            if(TempCart.Count != 0)
@@ -96,6 +107,7 @@ namespace Laboration4.Controllers
             }
         }
 
+        // Removes a product from shoppin cart,  if the product has a quantity larger than 1 then the quantity will decrease by 1
         internal void RemoveItem(uint Id)
         {
             var Item = CartList.FirstOrDefault(p => p.Id == Id);
@@ -112,6 +124,7 @@ namespace Laboration4.Controllers
             }
         }
 
+        // Removes all products in the shopping cart and updates quantity in inventory
         internal void RemoveAll()
         {
             foreach(var item in CartList)
@@ -124,6 +137,7 @@ namespace Laboration4.Controllers
             UpdateDataGrid();
         }
 
+        // Selling the products in the shopping cart and providing receipt
         internal void Checkout()
         {
             string Month = DateTime.Now.ToString("MMMM");
