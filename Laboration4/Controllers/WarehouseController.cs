@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -156,6 +157,7 @@ namespace Laboration4.Controllers
                             ids.Add(uint.Parse(element["id"].InnerText));
                             prices.Add(uint.Parse(element["price"].InnerText));
                             stocks.Add(uint.Parse(element["stock"].InnerText));
+                            HistoricalData(uint.Parse(element["price"].InnerText), uint.Parse(element["stock"].InnerText), element["name"].InnerText);
                         }
                     }
                 }
@@ -170,6 +172,31 @@ namespace Laboration4.Controllers
                 }
                 UpdateDataGrid();
             }
+        }
+
+        internal void HistoricalData(uint price, uint stock, string name)
+        {
+            XmlDocument doc = new XmlDocument();
+            if (File.Exists("historicaldata.xml"))
+            {
+                doc.Load("historicaldata.xml");
+            }
+            XmlElement root = doc.DocumentElement;
+            XmlElement pelem = doc.CreateElement("productdata");
+            XmlElement Price = doc.CreateElement("price");
+            Price.InnerText = price.ToString();
+            XmlElement Stock = doc.CreateElement("stock");
+            Stock.InnerText = stock.ToString();
+            XmlElement Date = doc.CreateElement("date");
+            Date.InnerText = DateTime.Now.ToString();
+            XmlElement Name = doc.CreateElement("name");
+            Name.InnerText = name;
+            pelem.AppendChild(Price);
+            pelem.AppendChild(Stock);
+            pelem.AppendChild(Date);
+            pelem.AppendChild(Name);
+            root.AppendChild(pelem);
+            doc.Save("historicaldata.xml");
         }
 
         // Sync local warehouse with central warehouse

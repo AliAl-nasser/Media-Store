@@ -2,7 +2,9 @@
 using Laboration4.Views;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Laboration4
 {
@@ -156,7 +158,23 @@ namespace Laboration4
 
         private void button2_Click(object sender, EventArgs e)
         {
-            GraphForm form = new GraphForm(new List<uint>() { 1, 2, 3 }, new List<uint>() { 1, 2, 3 }, new List<DateTime>() {DateTime.Now, DateTime.Now });
+            XmlDocument doc = new XmlDocument();
+            if (File.Exists("historicaldata.xml"))
+            {
+                doc.Load("historicaldata.xml");
+            }
+            List<uint> Prices = new List<uint>();
+            List<uint> Stocks = new List<uint>();
+            List<DateTime> Dates = new List<DateTime>();
+            List<string> Names = new List<string>();
+            foreach(XmlElement elem in doc.FirstChild.ChildNodes)
+            {
+                Prices.Add(uint.Parse(elem["price"].InnerText));
+                Stocks.Add(uint.Parse(elem["stock"].InnerText));
+                Dates.Add(DateTime.Parse(elem["date"].InnerText));
+                Names.Add(elem["name"].InnerText);
+            }
+            GraphForm form = new GraphForm(Prices, Stocks, Dates, Names);
             form.Show();
         }
     }
