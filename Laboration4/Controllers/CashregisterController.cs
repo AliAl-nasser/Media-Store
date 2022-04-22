@@ -173,6 +173,7 @@ namespace Laboration4.Controllers
             UpdateCartGrid();
             document.Save(FileName);
             Process.Start(FileName);
+            WarehouseController.Sync();
         }
     }
 }

@@ -16,16 +16,32 @@ namespace Laboration4
         string Id;
         // all ids for the products in Inventory
         List<string> WarehouseIds;
+        // Timer
+        private Timer timer;
         public WarehouseView()
         {
             InitializeComponent();
             WarehouseController = new WarehouseController();
         }
 
+        public void InitTimer()
+        {
+            timer = new Timer();
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Interval = 60000; //in milliseconds
+            timer.Start();
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            WarehouseController.UpdateProducts();
+        }
+
         // Event that occurs before the control becomes visible for the first time
         private void UserControlLoad(Object sender, EventArgs e)
         {
             WarehouseController.PopulateGridView(this.InventoryGridView);
+            InitTimer();
         }
 
         // Event that occurs when user click on a row in datagridview for inventory
@@ -136,6 +152,12 @@ namespace Laboration4
         private void SyncButton_Click(object sender, EventArgs e)
         {
             WarehouseController.Sync();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GraphForm form = new GraphForm(new List<uint>() { 1, 2, 3 }, new List<uint>() { 1, 2, 3 }, new List<DateTime>() {DateTime.Now, DateTime.Now });
+            form.Show();
         }
     }
 }

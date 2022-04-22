@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Windows.Forms;
 using System.Xml;
 using Laboration4.Models;
@@ -171,9 +172,20 @@ namespace Laboration4.Controllers
             }
         }
 
-        internal void Sync()
+        // Sync local warehouse with central warehouse
+        public static void Sync()
         {
-            WebClient client = new WebClient();
+            HttpClient client = new HttpClient();
+            foreach(var product in ProductsList)
+            {
+                var values = new Dictionary<string, string>
+                {
+                { "id", product.Id.ToString() },
+                { "stock", product.Quantity.ToString() }
+                };
+                var content = new FormUrlEncodedContent(values);
+                client.PostAsync("https://hex.cse.kau.se/~jonavest/csharp-api/?action=update", content);
+            }  
         }
 
         // Removes item from productlist
