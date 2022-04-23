@@ -125,11 +125,17 @@
     <Compile Include="Views\AddItem.Designer.cs">
       <DependentUpon>AddItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\GraphForm.cs">
+    <Compile Include="Views\PriceGraph.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\GraphForm.Designer.cs">
-      <DependentUpon>GraphForm.cs</DependentUpon>
+    <Compile Include="Views\PriceGraph.Designer.cs">
+      <DependentUpon>PriceGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StockGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\StockGraph.Designer.cs">
+      <DependentUpon>StockGraph.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\MainView.cs">
       <SubType>Form</SubType>
@@ -168,8 +174,11 @@
     <EmbeddedResource Include="Views\CashregisterView.resx">
       <DependentUpon>CashregisterView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\GraphForm.resx">
-      <DependentUpon>GraphForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\PriceGraph.resx">
+      <DependentUpon>PriceGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StockGraph.resx">
+      <DependentUpon>StockGraph.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>

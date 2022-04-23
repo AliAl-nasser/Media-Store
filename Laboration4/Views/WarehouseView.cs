@@ -164,17 +164,35 @@ namespace Laboration4
                 doc.Load("historicaldata.xml");
             }
             List<uint> Prices = new List<uint>();
-            List<uint> Stocks = new List<uint>();
             List<DateTime> Dates = new List<DateTime>();
             List<string> Names = new List<string>();
             foreach(XmlElement elem in doc.FirstChild.ChildNodes)
             {
                 Prices.Add(uint.Parse(elem["price"].InnerText));
+                Dates.Add(DateTime.Parse(elem["date"].InnerText));
+                Names.Add(elem["name"].InnerText);
+            }
+            PriceGraph form = new PriceGraph(Prices, Dates, Names);
+            form.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            XmlDocument doc = new XmlDocument();
+            if (File.Exists("historicaldata.xml"))
+            {
+                doc.Load("historicaldata.xml");
+            }
+            List<uint> Stocks = new List<uint>();
+            List<DateTime> Dates = new List<DateTime>();
+            List<string> Names = new List<string>();
+            foreach (XmlElement elem in doc.FirstChild.ChildNodes)
+            {
                 Stocks.Add(uint.Parse(elem["stock"].InnerText));
                 Dates.Add(DateTime.Parse(elem["date"].InnerText));
                 Names.Add(elem["name"].InnerText);
             }
-            GraphForm form = new GraphForm(Prices, Stocks, Dates, Names);
+            StockGraph form = new StockGraph(Stocks, Dates, Names);
             form.Show();
         }
     }

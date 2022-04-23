@@ -37,20 +37,21 @@
             this.SyncButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.NewDelivery = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.StatisticsButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.RemoveButton = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.AddButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SearchTextbox = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.NewDelivery = new System.Windows.Forms.Button();
+            this.StatisticsButton = new System.Windows.Forms.Button();
+            this.RemoveButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryGridView)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -113,6 +114,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.SyncButton);
             this.panel1.Controls.Add(this.button1);
@@ -167,22 +169,6 @@
             this.panel5.Size = new System.Drawing.Size(305, 76);
             this.panel5.TabIndex = 9;
             // 
-            // NewDelivery
-            // 
-            this.NewDelivery.FlatAppearance.BorderSize = 0;
-            this.NewDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NewDelivery.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewDelivery.ForeColor = System.Drawing.Color.Coral;
-            this.NewDelivery.Image = global::Laboration4.Properties.Resources.plus_sign;
-            this.NewDelivery.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.NewDelivery.Location = new System.Drawing.Point(0, 6);
-            this.NewDelivery.Name = "NewDelivery";
-            this.NewDelivery.Size = new System.Drawing.Size(302, 34);
-            this.NewDelivery.TabIndex = 5;
-            this.NewDelivery.Text = "New delivery";
-            this.NewDelivery.UseVisualStyleBackColor = true;
-            this.NewDelivery.Click += new System.EventHandler(this.NewDelivery_Click);
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.StatisticsButton);
@@ -191,24 +177,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(305, 47);
             this.flowLayoutPanel1.TabIndex = 8;
-            // 
-            // StatisticsButton
-            // 
-            this.StatisticsButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.StatisticsButton.FlatAppearance.BorderSize = 0;
-            this.StatisticsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StatisticsButton.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StatisticsButton.ForeColor = System.Drawing.Color.Coral;
-            this.StatisticsButton.Image = global::Laboration4.Properties.Resources.stats;
-            this.StatisticsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.StatisticsButton.Location = new System.Drawing.Point(3, 3);
-            this.StatisticsButton.Name = "StatisticsButton";
-            this.StatisticsButton.Padding = new System.Windows.Forms.Padding(3);
-            this.StatisticsButton.Size = new System.Drawing.Size(302, 44);
-            this.StatisticsButton.TabIndex = 4;
-            this.StatisticsButton.Text = "Statistics";
-            this.StatisticsButton.UseVisualStyleBackColor = true;
-            this.StatisticsButton.Click += new System.EventHandler(this.StatisticsButton_Click);
             // 
             // panel4
             // 
@@ -219,24 +187,6 @@
             this.panel4.Size = new System.Drawing.Size(305, 45);
             this.panel4.TabIndex = 7;
             // 
-            // RemoveButton
-            // 
-            this.RemoveButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.RemoveButton.FlatAppearance.BorderSize = 0;
-            this.RemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RemoveButton.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemoveButton.ForeColor = System.Drawing.Color.Coral;
-            this.RemoveButton.Image = global::Laboration4.Properties.Resources.delete;
-            this.RemoveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RemoveButton.Location = new System.Drawing.Point(0, 0);
-            this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Padding = new System.Windows.Forms.Padding(3);
-            this.RemoveButton.Size = new System.Drawing.Size(305, 45);
-            this.RemoveButton.TabIndex = 3;
-            this.RemoveButton.Text = "Remove from inventory";
-            this.RemoveButton.UseVisualStyleBackColor = true;
-            this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.AddButton);
@@ -245,26 +195,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(305, 52);
             this.panel3.TabIndex = 6;
-            // 
-            // AddButton
-            // 
-            this.AddButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.AddButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.AddButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AddButton.FlatAppearance.BorderSize = 0;
-            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddButton.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddButton.ForeColor = System.Drawing.Color.Coral;
-            this.AddButton.Image = global::Laboration4.Properties.Resources.plus_sign;
-            this.AddButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.AddButton.Location = new System.Drawing.Point(0, 0);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Padding = new System.Windows.Forms.Padding(3);
-            this.AddButton.Size = new System.Drawing.Size(305, 46);
-            this.AddButton.TabIndex = 2;
-            this.AddButton.Text = "Add product to inventory";
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // panel2
             // 
@@ -310,16 +240,6 @@
             this.SearchTextbox.TabIndex = 10;
             this.SearchTextbox.TextChanged += new System.EventHandler(this.SearchTextbox_TextChanged);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Laboration4.Properties.Resources.warehouse;
-            this.pictureBox1.Location = new System.Drawing.Point(79, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(152, 68);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // button2
             // 
             this.button2.FlatAppearance.BorderSize = 0;
@@ -333,6 +253,102 @@
             this.button2.Text = "Price over time";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // NewDelivery
+            // 
+            this.NewDelivery.FlatAppearance.BorderSize = 0;
+            this.NewDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NewDelivery.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewDelivery.ForeColor = System.Drawing.Color.Coral;
+            this.NewDelivery.Image = global::Laboration4.Properties.Resources.plus_sign;
+            this.NewDelivery.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.NewDelivery.Location = new System.Drawing.Point(0, 6);
+            this.NewDelivery.Name = "NewDelivery";
+            this.NewDelivery.Size = new System.Drawing.Size(302, 34);
+            this.NewDelivery.TabIndex = 5;
+            this.NewDelivery.Text = "New delivery";
+            this.NewDelivery.UseVisualStyleBackColor = true;
+            this.NewDelivery.Click += new System.EventHandler(this.NewDelivery_Click);
+            // 
+            // StatisticsButton
+            // 
+            this.StatisticsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.StatisticsButton.FlatAppearance.BorderSize = 0;
+            this.StatisticsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StatisticsButton.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatisticsButton.ForeColor = System.Drawing.Color.Coral;
+            this.StatisticsButton.Image = global::Laboration4.Properties.Resources.stats;
+            this.StatisticsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.StatisticsButton.Location = new System.Drawing.Point(3, 3);
+            this.StatisticsButton.Name = "StatisticsButton";
+            this.StatisticsButton.Padding = new System.Windows.Forms.Padding(3);
+            this.StatisticsButton.Size = new System.Drawing.Size(302, 44);
+            this.StatisticsButton.TabIndex = 4;
+            this.StatisticsButton.Text = "Statistics";
+            this.StatisticsButton.UseVisualStyleBackColor = true;
+            this.StatisticsButton.Click += new System.EventHandler(this.StatisticsButton_Click);
+            // 
+            // RemoveButton
+            // 
+            this.RemoveButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.RemoveButton.FlatAppearance.BorderSize = 0;
+            this.RemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RemoveButton.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoveButton.ForeColor = System.Drawing.Color.Coral;
+            this.RemoveButton.Image = global::Laboration4.Properties.Resources.delete;
+            this.RemoveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RemoveButton.Location = new System.Drawing.Point(0, 0);
+            this.RemoveButton.Name = "RemoveButton";
+            this.RemoveButton.Padding = new System.Windows.Forms.Padding(3);
+            this.RemoveButton.Size = new System.Drawing.Size(305, 45);
+            this.RemoveButton.TabIndex = 3;
+            this.RemoveButton.Text = "Remove from inventory";
+            this.RemoveButton.UseVisualStyleBackColor = true;
+            this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
+            // 
+            // AddButton
+            // 
+            this.AddButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.AddButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.AddButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AddButton.FlatAppearance.BorderSize = 0;
+            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddButton.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddButton.ForeColor = System.Drawing.Color.Coral;
+            this.AddButton.Image = global::Laboration4.Properties.Resources.plus_sign;
+            this.AddButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddButton.Location = new System.Drawing.Point(0, 0);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Padding = new System.Windows.Forms.Padding(3);
+            this.AddButton.Size = new System.Drawing.Size(305, 46);
+            this.AddButton.TabIndex = 2;
+            this.AddButton.Text = "Add product to inventory";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Laboration4.Properties.Resources.warehouse;
+            this.pictureBox1.Location = new System.Drawing.Point(79, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(152, 68);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Coral;
+            this.button3.Location = new System.Drawing.Point(0, 473);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(305, 35);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Stock over time";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // WarehouseView
             // 
@@ -384,5 +400,6 @@
         private System.Windows.Forms.Button SyncButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
