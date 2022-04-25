@@ -174,6 +174,8 @@ namespace Laboration4.Controllers
             }
         }
 
+
+        // Saves the price, stock and name data for all products to an XML file with the current time.
         internal void HistoricalData(uint price, uint stock, string name)
         {
             XmlDocument doc = new XmlDocument();
