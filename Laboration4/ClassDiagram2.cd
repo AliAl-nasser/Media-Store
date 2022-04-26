@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Laboration4.Controllers.CashregisterController">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="AddToCart" Hidden="true" />
+      <Field Name="CartList" Hidden="true" />
+      <Field Name="gridData" Hidden="true" />
+      <Field Name="gridData1" Hidden="true" />
+      <Method Name="PopulateGridView" Hidden="true" />
+      <Field Name="ProductsList" Hidden="true" />
+      <Method Name="RemoveAll" Hidden="true" />
+      <Method Name="RemoveItem" Hidden="true" />
+      <Method Name="Repurchase" Hidden="true" />
+      <Method Name="Search" Hidden="true" />
+      <Field Name="StatList" Hidden="true" />
+      <Field Name="TempCart" Hidden="true" />
+      <Method Name="UpdateCartGrid" Hidden="true" />
+      <Method Name="UpdateDataGrid" Hidden="true" />
+    </Members>
+    <AssociationLine Name="warehouseController" Type="Laboration4.Controllers.WarehouseController">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.327" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AABAQAAAAAAAJAAAAAAABAAAQEAAQAIEIBAAAAAgECA=</HashCode>
+      <FileName>Controllers\CashregisterController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="warehouseController" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Laboration4.Controllers.WarehouseController">
+    <Position X="4" Y="0.5" Width="2.25" />
+    <Members>
+      <Method Name="AddItem" Hidden="true" />
+      <Field Name="execption" Hidden="true" />
+      <Field Name="FileProcesspr" Hidden="true" />
+      <Method Name="GetProductList" Hidden="true" />
+      <Method Name="GetStatList" Hidden="true" />
+      <Field Name="gridData" Hidden="true" />
+      <Method Name="IncreaseQuantity" Hidden="true" />
+      <Method Name="PopulateGridView" Hidden="true" />
+      <Field Name="ProductsList" Hidden="true" />
+      <Method Name="ProvideData" Hidden="true" />
+      <Method Name="RemoveItem" Hidden="true" />
+      <Method Name="SaveData" Hidden="true" />
+      <Method Name="Search" Hidden="true" />
+      <Field Name="StatList" Hidden="true" />
+      <Method Name="UpdateDataGrid" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AABABAIAAAAAQACAEAAAAAAwwEAAAAAUABAAIIAwEAA=</HashCode>
+      <FileName>Controllers\WarehouseController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Laboration4.Views.PriceGraph">
+    <Position X="1.75" Y="1.75" Width="2" />
+    <Members>
+      <Field Name="chart1" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAgACAASAAAAAAAACAAAACAAAAAAAAAAAAAAACABA=</HashCode>
+      <FileName>Views\PriceGraph.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Laboration4.Views.StockGraph">
+    <Position X="6.5" Y="1.75" Width="2" />
+    <Members>
+      <Field Name="chart2" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAgACAACAAAAAAAACAAAACgAAAAAAAAAAAAAACABA=</HashCode>
+      <FileName>Views\StockGraph.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Laboration4.WarehouseView">
+    <Position X="8.75" Y="0.5" Width="2.25" />
+    <Members>
+      <Field Name="AddButton" Hidden="true" />
+      <Method Name="AddButton_Click" Hidden="true" />
+      <Field Name="button1" Hidden="true" />
+      <Field Name="button2" Hidden="true" />
+      <Field Name="button3" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="contextMenuStrip1" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="flowLayoutPanel1" Hidden="true" />
+      <Field Name="Id" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="InventoryGridView" Hidden="true" />
+      <Method Name="InventoryGridView_CellContentClick" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="NewDelivery" Hidden="true" />
+      <Method Name="NewDelivery_Click" Hidden="true" />
+      <Field Name="OldQuantity" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="panel3" Hidden="true" />
+      <Field Name="panel4" Hidden="true" />
+      <Field Name="panel5" Hidden="true" />
+      <Field Name="pictureBox1" Hidden="true" />
+      <Field Name="productsBindingSource" Hidden="true" />
+      <Field Name="QuantityTextbox" Hidden="true" />
+      <Method Name="QuantityTextbox_TextChanged" Hidden="true" />
+      <Field Name="RemoveButton" Hidden="true" />
+      <Method Name="RemoveButton_Click" Hidden="true" />
+      <Field Name="SearchTextbox" Hidden="true" />
+      <Method Name="SearchTextbox_TextChanged" Hidden="true" />
+      <Field Name="StatisticsButton" Hidden="true" />
+      <Method Name="StatisticsButton_Click" Hidden="true" />
+      <Field Name="SyncButton" Hidden="true" />
+      <Method Name="UserControlLoad" Hidden="true" />
+      <Field Name="WarehouseIds" Hidden="true" />
+      <Method Name="WarehouseView" Hidden="true" />
+    </Members>
+    <AssociationLine Name="WarehouseController" Type="Laboration4.Controllers.WarehouseController">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.476" Y="0.043" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABUCAAAEFCAgAhAAABCZBAACAMA4AiBAAEAgAYJAQAI=</HashCode>
+      <FileName>Views\WarehouseView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="WarehouseController" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

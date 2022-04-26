@@ -157,7 +157,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Update products";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.UpdateProducts_Click);
+            this.button1.Click += new System.EventHandler(this.timer_Tick);
             // 
             // panel5
             // 
@@ -252,7 +252,7 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "Price over time";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.PriceButton_Click);
             // 
             // NewDelivery
             // 
@@ -348,7 +348,7 @@
             this.button3.TabIndex = 13;
             this.button3.Text = "Stock over time";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.StockButton_Click);
             // 
             // WarehouseView
             // 

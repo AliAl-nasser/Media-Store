@@ -24,6 +24,7 @@ namespace Laboration4.Controllers
         public Exception execption;
         // Error message from API
         public string API;
+
         // Populates the datagridview and provide source
         internal void PopulateGridView(DataGridView dataGrid)
         {
@@ -46,6 +47,19 @@ namespace Laboration4.Controllers
         {
             FileProcesspr.WriteFile("Inventory.csv");
             FileProcesspr.WriteFile("statistics.csv");
+            RemoveHistoricalData();
+        }
+
+        //removes all historical data from XML file when application closes
+        private void RemoveHistoricalData()
+        {
+            XmlDocument doc = new XmlDocument();
+            if (File.Exists("historicaldata.xml"))
+            {
+                doc.Load("historicaldata.xml");
+            }
+            doc.DocumentElement.RemoveAll();
+            doc.Save("historicaldata.xml");
         }
 
         //Returns statlist

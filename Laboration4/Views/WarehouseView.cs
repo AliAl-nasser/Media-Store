@@ -37,6 +37,10 @@ namespace Laboration4
         private void timer_Tick(object sender, EventArgs e)
         {
             WarehouseController.UpdateProducts();
+            if (!String.IsNullOrEmpty(WarehouseController.API))
+            {
+                MessageBox.Show(WarehouseController.API);
+            }
         }
 
         // Event that occurs before the control becomes visible for the first time
@@ -141,22 +145,12 @@ namespace Laboration4
             WarehouseController.Search(SearchTextbox);
         }
 
-        // Event occurs when user click update products button
-        private void UpdateProducts_Click(object sender, EventArgs e)
-        {
-            WarehouseController.UpdateProducts();
-            if (!String.IsNullOrEmpty(WarehouseController.API))
-            {
-                MessageBox.Show(WarehouseController.API);
-            }
-        }
-
         private void SyncButton_Click(object sender, EventArgs e)
         {
             WarehouseController.Sync();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void PriceButton_Click(object sender, EventArgs e)
         {
             XmlDocument doc = new XmlDocument();
             if (File.Exists("historicaldata.xml"))
@@ -176,7 +170,7 @@ namespace Laboration4
             form.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void StockButton_Click(object sender, EventArgs e)
         {
             XmlDocument doc = new XmlDocument();
             if (File.Exists("historicaldata.xml"))
